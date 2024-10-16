@@ -5,7 +5,7 @@ from typing import Optional
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from fairscale.nn import checkpoint_wrapper
+from fairscale.nn import checkpoint_wrapper  # 只保存激活值，不保存整层权重
 
 from fairseq.model_parallel.megatron.mpu import (
     ColumnParallelLinear,
